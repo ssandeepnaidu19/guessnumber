@@ -1,0 +1,23 @@
+import random
+import time
+guessTaken=0
+computer=random.randint(1,200)
+while guessTaken<=5:
+    guess=int(input("Enter a number between range 1 to 200: "))
+    guessTaken+=1
+    if(guess>computer):
+        time.sleep(.5)
+        print("The number you entered is too high")
+    elif (guess<computer):
+        time.sleep(.5)
+        print("The number you entered is too low")
+    elif guess==computer:
+        time.sleep(.5)
+        print("The number you entered is correct")
+        time.sleep(.5)
+        print("you guess in ",guessTaken,"chances")
+    else:
+        print("Entered number not in range of 1 to 200")
+time.sleep(.5)
+print("your guess limit exceeded")
+
